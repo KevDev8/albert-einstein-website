@@ -1,0 +1,366 @@
+/* ---------- PAGE SETUP ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f5f3ff;
+  color: #2e2450;
+  font-family: "Segoe UI", sans-serif;
+  line-height: 1.6;
+}
+
+/* ---------- NAVIGATION ---------- */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #dcd4ff;
+  border-bottom: 1px solid #c5b8ff;
+  z-index: 100;
+  display: grid;
+  justify-content: center;
+}
+
+nav ul {
+  list-style: none;
+  display: grid;
+  grid-auto-flow: column;
+  gap: 20px;
+  padding: 12px 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: #4b0082;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #000;
+}
+
+/* ---------- MAIN LAYOUT ---------- */
+main {
+  margin-top: 80px;
+  display: grid;
+  grid-auto-rows: auto;
+  gap: 60px;
+  padding: 40px;
+}
+
+/* ---------- ABOUT SECTION ---------- */
+.about {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 30px;
+  align-items: start;
+}
+
+.about-text {
+  background: #ede8ff;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.about-text h2 {
+  margin-bottom: 10px;
+}
+
+.about-img {
+  display: grid;
+  justify-items: center;
+  align-content: start;
+  gap: 10px;
+}
+
+.about-img img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+}
+
+.name {
+  font-style: italic;
+  color: #4b0082;
+}
+
+/* ---------- HOBBIES SECTION ---------- */
+.hobbies {
+  display: grid;
+  gap: 20px;
+}
+
+.hobbies h2 {
+  margin-bottom: 5px;
+}
+
+.hobby-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 20px;
+}
+
+.hobby {
+  display: grid;
+  grid-template-rows: auto auto;
+  justify-items: center;
+  background: #e8e0ff;
+  padding: 18px;
+  border-radius: 10px;
+  text-align: center;
+  border: 1px solid #cfc4ff;
+  transition: transform 0.2s ease;
+}
+
+.hobby:hover {
+  transform: translateY(-3px);
+}
+
+.hobby img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+}
+
+.hobby-name {
+  font-weight: 600;
+  color: #2e2450;
+}
+
+/* ---------- PAPERS SECTION ---------- */
+.papers {
+  display: grid;
+  gap: 20px;
+}
+
+.papers h2 {
+  margin-bottom: 5px;
+}
+
+.papers-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+.paper {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  column-gap: 18px;
+  background: #ffffff;
+  border: 1px solid #dcd7e9;
+  border-radius: 6px;
+  padding: 20px;
+  box-shadow: 0 6px 18px rgba(39, 29, 77, 0.06);
+  transition: transform 0.2s ease;
+}
+
+.paper:hover {
+  transform: translateY(-3px);
+}
+
+.paper-icon {
+  width: 70px;
+  height: 70px;
+  justify-self: center;
+}
+
+.paper-meta {
+  display: grid;
+  row-gap: 6px;
+}
+
+.paper-title {
+  font-size: 18px;
+  color: #2e2450;
+  font-weight: bold;
+}
+
+.paper-sub {
+  font-size: 13px;
+  color: #6b5f7f;
+}
+
+/* ---------- GALLERY SECTION ---------- */
+.gallery {
+  display: grid;
+  gap: 20px;
+}
+
+.gallery h2 {
+  margin-bottom: 5px;
+}
+
+.gallery-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 24px;
+}
+
+.gallery-item {
+  display: grid;
+  justify-items: center;
+  background: #e8e0ff;
+  padding: 16px;
+  border-radius: 10px;
+  border: 1px solid #cfc4ff;
+  transition: transform 0.2s ease;
+}
+
+.gallery-item:hover {
+  transform: translateY(-3px);
+}
+
+.gallery-item img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+}
+
+
+/* ---------- BLOG SECTION ---------- */
+.blog {
+  display: grid;
+  gap: 15px;
+}
+
+.blog h2 {
+  margin-bottom: 5px;
+}
+
+.blog p {
+  background: #ede8ff;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+  background: #dcd4ff;
+  text-align: center;
+  padding: 20px;
+  color: #4b0082;
+  font-weight: bold;
+  border-top: 1px solid #c5b8ff;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 800px) {
+  main {
+    padding: 24px;
+    gap: 40px;
+  }
+
+  nav {
+    display: grid;
+    justify-items: center;
+    padding: 10px 0;
+  }
+
+  nav li {
+    width: 100%;
+  }
+
+  nav a {
+    display: block;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+    border-radius: 6px;
+    background: #e9e3ff;
+  }
+
+  nav a:hover {
+    background: #dcd4ff;
+  }
+
+  .about {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "img"
+      "text";
+    text-align: center;
+  }
+
+  .about-img {
+    grid-area: img;
+  }
+
+  .about-text {
+    grid-area: text;
+  }
+
+  .about-img img {
+    max-width: 220px;
+  }
+
+  .hobby-list {
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  }
+
+  .gallery-list {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  }
+
+  .papers-container {
+    grid-template-columns: 1fr;
+    padding: 0 10px;
+  }
+
+  footer {
+    text-align: center;
+    padding: 16px;
+  }
+}
+
+@media (max-width: 500px) {
+  main {
+    padding: 16px;
+    gap: 30px;
+  }
+
+  nav ul {
+    gap: 8px;
+  }
+
+  nav a {
+    font-size: 15px;
+    padding: 8px;
+  }
+
+  .hobby img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .gallery-item img {
+    width: 140px;
+    height: 140px;
+  }
+
+  .paper {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+  }
+
+  .paper-icon {
+    margin-bottom: 8px;
+  }
+
+  .paper-title {
+    font-size: 16px;
+  }
+}

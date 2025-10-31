@@ -1,1 +1,0 @@
-# albert-einstein-website
